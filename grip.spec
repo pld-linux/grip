@@ -5,10 +5,6 @@ Version:	2.96
 Release:	1
 License:	GPL
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(es):	Aplicaciones/Sonido
-Group(pl):	Aplikacje/D¼wiêk
-Group(pt_BR):	Aplicações/Som
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tgz
 Patch0:		%{name}-install.patch
 Patch1:		%{name}-opt.patch
