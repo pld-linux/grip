@@ -9,11 +9,11 @@ Group(de):	Applikationen/Laut
 Group(es):	Aplicaciones/Sonido
 Group(pl):	Aplikacje/D¼wiêk
 Group(pt_BR):	Aplicações/Som
-Source0:	http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
+Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tgz
 Patch0:		%{name}-install.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-libs.patch
-URL:		http://www.ling.ed.ac.uk/~oliphant/grip
+URL:		http://www.nostatic.org/grip/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	XFree86-devel
 BuildRequires:	gtk+-devel
