@@ -28,6 +28,7 @@ BuildRequires:	curl-devel
 BuildRequires:	id3lib-devel >= 3.7.13
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
+Buildrequires:	libtool
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -97,6 +98,7 @@ cdda2wav)。同時提供自動的 MP3 編碼前端，還可以自動地從 Internet 上
 %patch2 -p1
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
