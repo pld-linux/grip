@@ -9,16 +9,17 @@ Summary(zh_CN):	Grip 岆珨跺 CD 畦溫ん﹜蚰寢ん睿 MP3 晤鎢んヶ傷最唗﹝
 Summary(zh_HK):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Summary(zh_TW):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
-Version:	3.1.3
-Release:	2
+Version:	3.1.4
+Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	 http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	9fcdde620a951cddac7ce07f9f91f9bb
+# Source0-md5:	20929c3c832dbbf784685d39b3114bf9
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-configure_in.patch
+Patch2:		%{name}-cdparanoia_include.patch
 URL:		http://www.nostatic.org/grip/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	autoconf
@@ -26,7 +27,7 @@ BuildRequires:	automake
 BuildRequires:	cdparanoia-III-devel
 BuildRequires:	id3lib-devel
 BuildRequires:	libghttp-devel
-BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
+BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -94,6 +95,7 @@ cdda2wav)。同時提供自動的 MP3 編碼前端，還可以自動地從 Internet 上
 %setup  -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
