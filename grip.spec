@@ -1,16 +1,19 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
-Summary(pl):	rip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD i/lub kompresowanie ich w formacie MP3.
+Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 Name:		grip
 Version:	2.5
 Release:	1
 License:	GPL
 Group:		Applications/Sound
+Group(de):	Applikationen/Laut
+Group(es):	Aplicaciones/Sonido
 Group(pl):	Aplikacje/D¼wiêk
+Group(pt_BR):	Aplicações/Som
 Source0:	http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
-Patch0:		grip-install.patch
-Patch1:		grip-opt.patch
-Patch2:		grip-libs.patch
-Patch3:		grip-tmpnam.patch
+Patch0:		%{name}-install.patch
+Patch1:		%{name}-opt.patch
+Patch2:		%{name}-libs.patch
+Patch3:		%{name}-tmpnam.patch
 URL:		http://www.ling.ed.ac.uk/~oliphant/grip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	XFree86-devel
@@ -20,8 +23,8 @@ Requires:	bladeenc
 Requires:	cdparanoia-III
 Requires:	mp3info
 
-%define		_prefix	/usr/X11R6
-%define		_mandir /usr/X11R6/man
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 Grip is a gtk-based cd-player and front-end for cd-rippers and MP3
@@ -44,7 +47,7 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 %patch3 -p1
 
 %build
-%{__make} AUXDIR=/etc INSTALLDIR=%{_bindir}
+%{__make} AUXDIR=%{_sysconfdir} INSTALLDIR=%{_bindir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
