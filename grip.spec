@@ -10,7 +10,7 @@ Summary(zh_HK):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Summary(zh_TW):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
 Version:	3.2.0
-Release:	5
+Release:	6
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
@@ -114,6 +114,9 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 	Applicationsdir=%{_desktopdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+
+# this is same as zh_TW
+rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/zh_HK
 
 %find_lang %{name} --all-name --with-gnome
 
