@@ -1,5 +1,6 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
 Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
+Summary(zh_CN):	Grip是一个 CD 播放器, 抓轨器和 MP3 编码器前端程序.
 Name:		grip
 Version:	3.0.0
 Release:	1
@@ -31,6 +32,13 @@ program體 禼i眊aj眂ych 禼ie縦i CD oraz kompresuj眂ych pliki d紈i阫owe
 do formatu MP3. Umo縧iwia 禼i眊anie tak ca硑ch jak i wybranych cz甓ci
 utworu. Program ten wspiera protok蟪 CDDB w celu 禼i眊ania/wysy砤nia
 danych o kompakcie z/do umo縧iwiaj眂ego tego typu operacje serwera.
+
+%description -l zh_CN
+Grip 是一个可以在Gnome桌面环境下运行的CD音乐播放器和抓轨器, 它可以使用
+内置的 cdparanoia 程序抓轨器(将音轨存储为文件),也可以使用外部的抓轨器
+(例如: cdda2wav).同时提供自动的MP3编码前端,
+还可以自动地从internet上的光 盘数据库中查询光盘曲目.
+如果协同DigitalDJ程序一起工作, 您可以创建自己的 "计算机化"的音乐库.
 
 %prep
 %setup -q
