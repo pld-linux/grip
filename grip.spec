@@ -1,22 +1,19 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
 Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 Name:		grip
-Version:	2.96
+Version:	3.0.0
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
-Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tgz
+Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
-Patch0:		%{name}-install.patch
-Patch1:		%{name}-opt.patch
-Patch2:		%{name}-libs.patch
 URL:		http://www.nostatic.org/grip/
 BuildRequires:	gtk+-devel
+BuildRequires:	gnome-libs-devel
 BuildRequires:	cdparanoia-III-devel
-Requires:	bladeenc
-Requires:	mp3info
+BuildRequires:	libghttp-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -37,22 +34,25 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+#%patch0 -p1
+#%patch1 -p1
+#%patch2 -p1
 
 %build
+#%{__autoconf}
+#%{__automake}
+%configure2_13 \
+	--disable-id3
 %{__make} \
-	CC="%{__cc} %{rpmcflags}" \
-	AUXDIR=%{_sysconfdir} INSTALLDIR=%{_bindir}
+	CC="%{__cc} %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Multimedia}
 
-%{__make} install \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir}
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
+#	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
+#	AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
