@@ -1,0 +1,40 @@
+--- grip-2.5/Makefile	Sun Jan 28 12:10:07 2001
++++ grip-2.5-p/Makefile	Sun Jan 28 12:09:40 2001
+@@ -19,8 +19,7 @@
+ 
+ # Link libraries
+ LIBS=	`gtk-config --libs` -lpthread
+-PARLIBS=	cdparanoia/interface/cdda_interface.a \
+-		cdparanoia/paranoia/cdda_paranoia.a
++PARLIBS= -lcdda_interface -lcdda_paranoia
+ 
+ # This is needed for "make install"
+ INSTALL  = /usr/bin/install
+diff -Naur grip-2.5/cdpar.c grip-2.5-p/cdpar.c
+--- grip-2.5/cdpar.c	Thu Jul  1 16:52:49 1999
++++ grip-2.5-p/cdpar.c	Sun Jan 28 12:14:30 2001
+@@ -36,8 +36,8 @@
+ #define size16 short
+ #define size32 int
+ 
+-#include "cdparanoia/interface/cdda_interface.h"
+-#include "cdparanoia/paranoia/cdda_paranoia.h"
++#include <cdda_interface.h>
++#include <cdda_paranoia.h>
+ #include "cdparanoia/utils.h"
+ 
+ static void PutNum(long num,int f,int endianness,int bytes);
+diff -Naur grip-2.5/grip.c grip-2.5-p/grip.c
+--- grip-2.5/grip.c	Thu Jul  1 16:52:48 1999
++++ grip-2.5-p/grip.c	Sun Jan 28 12:14:30 2001
+@@ -43,8 +43,8 @@
+ #ifdef CDPAR
+ #define size16 short
+ #define size32 int
+-#include "cdparanoia/interface/cdda_interface.h"
+-#include "cdparanoia/paranoia/cdda_paranoia.h"
++#include <cdda_interface.h>
++#include <cdda_paranoia.h>
+ #endif
+ 
+ void ShutDownCB(void);
