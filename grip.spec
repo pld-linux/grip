@@ -1,6 +1,5 @@
 Summary:     Grip, a CD player and ripper/MP3-encoder front-end
-Summary(pl): Grip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD
-             i/lub kompresowanie ich w formacie MP3.
+Summary(pl): Grip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD i/lub kompresowanie ich w formacie MP3.
 Name:        grip
 Version:     2.1
 Release:     1
@@ -10,6 +9,7 @@ Source:      http://www.ling.ed.ac.uk/~oliphant/grip/grip-2.1.tgz
 Patch0:      grip.install.patch
 URL:         http://www.ling.ed.ac.uk/~oliphant/grip
 Buildroot:   /tmp/%{name}-root
+Requires:    BladeEnc, cdparanoia
 Buildprereq: glib => 1.2, gtk+ => 1.2
 
 %description
