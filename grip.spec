@@ -34,25 +34,17 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %prep
 %setup -q
-#%patch0 -p1
-#%patch1 -p1
-#%patch2 -p1
 
 %build
-#%{__autoconf}
-#%{__automake}
 %configure2_13 \
 	--disable-id3
-%{__make} \
-	CC="%{__cc} %{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Multimedia}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-#	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-#	AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
