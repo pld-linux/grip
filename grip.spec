@@ -14,7 +14,7 @@ Patch2:		cdparanoia-III.patch
 URL:		http://www.ling.ed.ac.uk/~oliphant/grip
 Buildroot:	/tmp/%{name}-%{version}-root
 Requires:	bladeenc, cdparanoia, mp3info
-Buildprereq:	glib-devel => 1.2, gtk+-devel => 1.2
+BuildRequires:	glib-devel => 1.2, gtk+-devel => 1.2
 
 %define		_prefix	/usr/X11R6
 %define		_mandir /usr/X11R6/man
