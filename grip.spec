@@ -1,6 +1,10 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
+Summary(ca):	Reproductor/extractor de CD d'audio
+Summary(es):	Grip, interfaz para reproducir CDs y generar MP3s
 Summary(fr):	Grip, un lecteur de CD, extracteur, et IHM pour encodeur MP3
+Summary(ja):	CD ¥×¥ì¡¼¥ä¡¼/¥ê¥Ã¥Ñ/MP3¥¨¥ó¥³¡¼¥À ¥Õ¥í¥ó¥È¥¨¥ó¥É
 Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
+Summary(pt_BR):	Grip, interface para reproduzir CDs e gerar MP3s
 Summary(zh_CN):	Grip ÊÇÒ»¸ö CD ²¥·ÅÆ÷¡¢×¥¹ìÆ÷ºÍ MP3 ±àÂëÆ÷Ç°¶Ë³ÌÐò¡£
 Summary(zh_HK):	Grip ¬O¤@­Ó CD ¼½©ñ¾¹¡B§ì­y¾¹©M MP3 ½s½X¾¹«eºÝµ{¦¡¡C
 Summary(zh_TW):	Grip ¬O¤@­Ó CD ¼½©ñ¾¹¡B§ì­y¾¹©M MP3 ½s½X¾¹«eºÝµ{¦¡¡C
@@ -11,19 +15,16 @@ Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tar.gz
-Source1:	%{name}.desktop
-Source2:	%{name}.png
+Source1:	%{name}.png
+Patch0:		%{name}-desktop.patch
 URL:		http://www.nostatic.org/grip/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cdparanoia-III-devel
 BuildRequires:	gnome-libs-devel
-BuildRequires:	gtk+-devel
 BuildRequires:	libghttp-devel
-BuildRequires:	gcc-c++
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Grip is a gtk-based cd-player and front-end for cd-rippers and MP3
@@ -41,12 +42,24 @@ Internet permet également d'avoir les informations sur les pistes
 auprès des serveurs CDDB. Grip fonctionne également avec DigitalDJ
 pour fournir une version unifiée informatique de votre discothèque.
 
+%description -l es
+Grip es una interfaz GTK para programas que copian bandas de CD como
+cdparanoia y cdda2wav. Permite copiar bandas enteras, o solamente
+algunas partes. También le permite llamar su codificador MP3 favorito.
+Y también sirve como interfaz para tocar CDs.
+
 %description -l pl
 Grip jest odtwarzaczem kompaktów. Mo¿e byæ u¿ywany jako front-end do
 programów ¶ci±gaj±cych ¶cie¿ki CD oraz kompresuj±cych pliki d¼wiêkowe
 do formatu MP3. Umo¿liwia ¶ci±ganie tak ca³ych jak i wybranych czê¶ci
 utworu. Program ten wspiera protokó³ CDDB w celu ¶ci±gania/wysy³ania
 danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
+
+%description -l pt_BR
+Grip é uma interface GTK para programas que copiam faixas de CD como o
+cdparanoia e cdda2wav. Ele permite que você copie faixas inteiras, ou
+apenas pedaços. Também permite que você chame seu codificador MP3
+favorito. Finalmente, ele também serve como interface para tocar CDs.
 
 %description -l zh_CN
 Grip ÊÇÒ»¸ö¿ÉÒÔÔÚ GNOME ×ÀÃæ»·¾³ÏÂÔËÐÐµÄ CD
@@ -73,9 +86,8 @@ cdda2wav)¡C¦P®É´£¨Ñ¦Û°Êªº MP3 ½s½X«eºÝ¡AÁÙ¥i¥H¦Û°Ê¦a±q Internet ¤W
 µ{¦¡¤@°_¤u§@¡A±z¥i¥H«Ø¥ß ¦Û¤vªº¡u¹q¸£¤Æ¡vªº­µ¼Ö®w¡C
 
 %prep
-%setup -q
-
-install %{SOURCE1} .
+%setup  -q
+%patch0 -p1
 
 %build
 rm -f missing
@@ -94,7 +106,7 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Multimedia
 
-install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name} --with-gnome
 
