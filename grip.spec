@@ -23,8 +23,8 @@ URL:		http://www.nostatic.org/grip/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cdparanoia-III-devel
+BuildRequires:	curl-devel
 BuildRequires:	id3lib-devel >= 3.7.13
-BuildRequires:	libcurl-devel
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	vte-devel
