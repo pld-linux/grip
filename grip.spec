@@ -3,7 +3,7 @@ Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 Name:		grip
 Version:	2.96
 Release:	1
-Epoch		1
+Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tgz
