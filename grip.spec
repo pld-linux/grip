@@ -24,6 +24,7 @@ BuildRequires:	cdparanoia-III-devel
 BuildRequires:	gnome-libs-devel
 BuildRequires:	libghttp-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	alsa-lib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
