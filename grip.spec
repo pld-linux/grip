@@ -15,6 +15,7 @@ Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tar.gz
+# Source0-md5:	eac4bbb44584cb64273c048343b37124
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 URL:		http://www.nostatic.org/grip/
