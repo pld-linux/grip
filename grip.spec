@@ -36,11 +36,11 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 %setup -q -a 1
 %patch0 -p1
 %patch1 -p1
-cd cdparanoia-III-alpha9.5
+cd cdparanoia-III-alpha9.7
 %patch2 -p1
 
 %build
-mv cdparanoia-III-alpha9.5 cdparanoia
+mv cdparanoia-III-alpha9.7 cdparanoia
 cd cdparanoia
 RPM_OPT=$RPM_OPT_FLAGS
 export RPM_OPT
