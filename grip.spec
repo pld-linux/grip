@@ -7,13 +7,18 @@ License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
-Source1:	http://www.mit.edu/afs/sipb/user/xiphmont/cdparanoia/download/cdparanoia-III-alpha9.7.src.tgz
 Patch0:		grip-install.patch
 Patch1:		grip-opt.patch
-Patch2:		cdparanoia-III.patch
+Patch2:		grip-libs.patch
+Patch3:		grip-tmpnam.patch
 URL:		http://www.ling.ed.ac.uk/~oliphant/grip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	bladeenc, cdparanoia, mp3info
+BuildRequires:	XFree86-devel
+BuildRequires:	gtk+-devel
+BuildRequires:	cdparanoia-III-devel
+Requires:	bladeenc
+Requires:	cdparanoia-III
+Requires:	mp3info
 
 %define		_prefix	/usr/X11R6
 %define		_mandir /usr/X11R6/man
@@ -33,20 +38,12 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %prep
 %setup -q
-%setup -q -a 1
 %patch0 -p1
 %patch1 -p1
-cd cdparanoia-III-alpha9.7
 %patch2 -p1
+%patch3 -p1
 
 %build
-mv cdparanoia-III-alpha9.7 cdparanoia
-cd cdparanoia
-RPM_OPT=$RPM_OPT_FLAGS
-export RPM_OPT
-%configure
-%{__make}
-cd ..
 %{__make} AUXDIR=/etc INSTALLDIR=%{_bindir}
 
 %install
