@@ -22,8 +22,6 @@ BuildRequires:	gtk+-devel
 BuildRequires:	libghttp-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Grip is a gtk-based cd-player and front-end for cd-rippers and MP3
