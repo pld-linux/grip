@@ -47,14 +47,14 @@ export RPM_OPT
 %configure
 make
 cd ..
-make AUXDIR=/etc INSTALLDIR=%{_bindir}
+%{__make} AUXDIR=/etc INSTALLDIR=%{_bindir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
 
-make PREFIX=$RPM_BUILD_ROOT%{_prefix} AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir} install
+%{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir} install
 install gripicon.tif $RPM_BUILD_ROOT%{_datadir}/pixmaps/gripicon.tiff
 
 strip $RPM_BUILD_ROOT%{_bindir}/*
