@@ -1,6 +1,6 @@
 --- grip-3.0.5/grip.desktop~	Sat Jan  4 20:04:07 2003
 +++ grip-3.0.5/grip.desktop	Sun Jan 19 11:22:54 2003
-@@ -1,22 +1,21 @@
+@@ -1,22 +1,19 @@
  [Desktop Entry]
  Name=Grip
 -Name[ca]=Grip
@@ -16,18 +16,21 @@
  Comment[es]=Reproductor/extractor de CDs de audio
  Comment[fr]=Lecteur/extracteur de CD audio
  Comment[fi]=CD-audion soitto- ja kopiointiohjelma
-+Comment[ja]=CD ¥×¥ì¡¼¥ä¡¼/¥ê¥Ã¥Ñ/MP3¥¨¥ó¥³¡¼¥À ¥Õ¥í¥ó¥È¥¨¥ó¥É
+-Comment[zh_CN]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
+-Comment[zh_CN.GB2312]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
+-Comment[zh_TW]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
+-Comment[zh_TW.Big5]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
++Comment[ja]=CD ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼/ãƒªãƒƒãƒ‘/MP3ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ ãƒ•ãƒ­ãƒ³ãƒˆã‚¨ãƒ³ãƒ‰
 +Comment[pl]=Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 +Comment[pt]=Grip, interface para reproduzir CDs e gerar MP3s
- Comment[zh_CN]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
- Comment[zh_CN.GB2312]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
- Comment[zh_TW]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
- Comment[zh_TW.Big5]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
++Comment[zh_CN]=Grip è®©æ‚¨è½»æ¾åˆ¶ä½œ MP3 æ–‡ä»¶
++Comment[zh_TW]=Grip è®“æ‚¨è¼•é¬†è£½ä½œ MP3 æª”
  Exec=grip
 -Icon=gripicon.png
 +Icon=grip.png
 +Terminal=false
  Type=Application
- Categories=Application;AudioVideo;
+-Categories=Application;AudioVideo;
++Categories=GTK;GNOME;AudioVideo;
 +Encoding=UTF-8
 +# vi: encoding=utf-8
