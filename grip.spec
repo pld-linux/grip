@@ -5,7 +5,7 @@ Release:     1
 Copyright:   GPL
 Group:       Applications/Sound
 Source:      http://www.ling.ed.ac.uk/~oliphant/grip/grip-2.1.tgz
-Patch0:      grip-%{version}.install.patch
+Patch0:      grip.install.patch
 URL:         http://www.ling.ed.ac.uk/~oliphant/grip
 Buildroot:   /tmp/%{name}-root
 Buildprereq: glib => 1.2, gtk+ => 1.2
