@@ -3,20 +3,21 @@ Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 Name:		grip
 Version:	2.96
 Release:	1
+Epoch		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tgz
+Source1:	%{name}.png
+Source2:	%{name}.desktop
 Patch0:		%{name}-install.patch
 Patch1:		%{name}-opt.patch
 Patch2:		%{name}-libs.patch
 URL:		http://www.nostatic.org/grip/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:	XFree86-devel
 BuildRequires:	gtk+-devel
 BuildRequires:	cdparanoia-III-devel
 Requires:	bladeenc
-Requires:	cdparanoia-III
 Requires:	mp3info
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -41,23 +42,29 @@ danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 %patch2 -p1
 
 %build
-%{__make} AUXDIR=%{_sysconfdir} INSTALLDIR=%{_bindir}
+%{__make} \
+	CC="%{__cc} %{rpmcflags}" \
+	AUXDIR=%{_sysconfdir} INSTALLDIR=%{_bindir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Multimedia}
 
-install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
+%{__make} install \
+	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
+	AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir}
 
-%{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir} install
-install gripicon.tif $RPM_BUILD_ROOT%{_datadir}/pixmaps/gripicon.tiff
+install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
-gzip -9nf README CREDITS LICENSE TODO
+gzip -9nf README CREDITS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,CREDITS,LICENSE,TODO}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
-%{_pixmapsdir}/gripicon.tiff
+%{_applnkdir}/Multimedia/*
+%{_pixmapsdir}/*
