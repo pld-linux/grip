@@ -65,5 +65,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {README,CREDITS,LICENSE,TODO}.gz
 %attr(755,root,root) %{_bindir}/grip
-%{_datadir}/pixmaps/gripicon.tiff
+%{_pixmapsdir}/gripicon.tiff
 %config %{_sysconfdir}/grip.rc
