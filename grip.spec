@@ -54,8 +54,6 @@ install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
 %{__make} PREFIX=$RPM_BUILD_ROOT%{_prefix} AUXDIR=$RPM_BUILD_ROOT%{_sysconfdir} install
 install gripicon.tif $RPM_BUILD_ROOT%{_datadir}/pixmaps/gripicon.tiff
 
-strip $RPM_BUILD_ROOT%{_bindir}/*
-
 gzip -9nf README CREDITS LICENSE TODO
 
 %clean
