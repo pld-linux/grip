@@ -12,7 +12,7 @@ Patch0:		grip-install.patch
 Patch1:		grip-opt.patch
 Patch2:		cdparanoia-III.patch
 URL:		http://www.ling.ed.ac.uk/~oliphant/grip
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	bladeenc, cdparanoia, mp3info
 BuildRequires:	glib-devel => 1.2, gtk+-devel => 1.2
 
