@@ -1,7 +1,7 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
 Summary(pl):	rip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD i/lub kompresowanie ich w formacie MP3.
 Name:		grip
-Version:	2.2
+Version:	2.5
 Release:	1
 Copyright:	GPL
 Group:		Applications/Sound
