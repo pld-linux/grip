@@ -28,6 +28,7 @@ BuildRequires:	id3lib-devel
 BuildRequires:	libghttp-devel
 BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 BuildRequires:	libstdc++-devel
+BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
