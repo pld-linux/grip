@@ -1,0 +1,29 @@
+--- grip-3.0.5/grip.desktop~	Sat Jan  4 20:04:07 2003
++++ grip-3.0.5/grip.desktop	Sun Jan 19 11:22:54 2003
+@@ -1,19 +1,18 @@
+ [Desktop Entry]
+ Name=Grip
+-Name[ca]=Grip
+-Name[es]=Grip
+-Name[zh_CN]=Grip MP3 å<88>¶ä½<9C>ç¨<8B>åº<8F>
+-Name[zh_CN.GB2312]=Grip MP3 å<88>¶ä½<9C>ç¨<8B>åº<8F>
+-Name[zh_TW]=Grip MP3 è£½ä½<9C>ç¨<8B>å¼<8F>
+-Name[zh_TW.Big5]=Grip MP3 è£½ä½<9C>ç¨<8B>å¼<8F>
+-Comment=CD player/ripper
++Comment=Grip, a CD player and ripper/MP3-encoder front-end
+ Comment[ca]=Reproductor/extractor de CD d'audio
+ Comment[es]=Reproductor/extractor de CDs de audio
+ Comment[fr]=Lecteur/extracteur de CD audio
++Comment[ja]=CD ¥×¥ì¡¼¥ä¡¼/¥ê¥Ã¥Ñ/MP3¥¨¥ó¥³¡¼¥À ¥Õ¥í¥ó¥È¥¨¥ó¥É
++Comment[pl]=Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
++Comment[pt]=Grip, interface para reproduzir CDs e gerar MP3s
+ Comment[zh_CN]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
+ Comment[zh_CN.GB2312]=Grip è®©æ<82>¨è½»æ<9D>¾å<88>¶ä½<9C> MP3 æ<96><87>ä»¶
+ Comment[zh_TW]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
+ Comment[zh_TW.Big5]=Grip è®<93>æ<82>¨è¼<95>é¬<86>è£½ä½<9C> MP3 æª<94>
+ Exec=grip
+-Icon=gripicon.png
++Icon=grip.png
++Terminal=0
+ Type=Application
++# vi: encoding=utf-8
