@@ -9,13 +9,13 @@ Summary(zh_CN):	Grip 岆珨跺 CD 畦溫ん﹜蚰寢ん睿 MP3 晤鎢んヶ傷最唗﹝
 Summary(zh_HK):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Summary(zh_TW):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
-Version:	3.1.2
+Version:	3.1.3
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
-Source0:	http://www.nostatic.org/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	ab41f4eb6624397c2bb4fe17a68c1e33
+Source0:	 http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	9fcdde620a951cddac7ce07f9f91f9bb
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-configure_in.patch
