@@ -1,17 +1,23 @@
-Summary:     Grip, a CD player and ripper/MP3-encoder front-end
-Summary(pl): Grip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD i/lub kompresowanie ich w formacie MP3.
-Name:        grip
-Version:     2.2
-Release:     1
-Copyright:   GPL
-Group:       Applications/Sound
-Group(pl):   Aplikacje/D¼wiêk
-Source:      http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
-Patch0:      grip-install.patch
-URL:         http://www.ling.ed.ac.uk/~oliphant/grip
-Buildroot:   /tmp/%{name}-root
-Requires:    BladeEnc, cdparanoia, mp3info
-Buildprereq: glib => 1.2, gtk+ => 1.2
+Summary:	Grip, a CD player and ripper/MP3-encoder front-end
+Summary(pl):	rip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD i/lub kompresowanie ich w formacie MP3.
+Name:		grip
+Version:	2.2
+Release:	1
+Copyright:	GPL
+Group:		Applications/Sound
+Group(pl):	Aplikacje/D¼wiêk
+Source0:	http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
+Source1:	http://www.mit.edu/afs/sipb/user/xiphmont/cdparanoia/download/cdparanoia-III-alpha9.5.src.tgz
+Patch0:		grip-install.patch
+Patch1:		grip-opt.patch
+Patch2:		cdparanoia-III.patch
+URL:		http://www.ling.ed.ac.uk/~oliphant/grip
+Buildroot:	/tmp/%{name}-%{version}-root
+Requires:	bladeenc, cdparanoia, mp3info
+Buildprereq:	glib-devel => 1.2, gtk+-devel => 1.2
+
+%define		_prefix	/usr/X11R6
+%define		_mandir /usr/X11R6/man
 
 %description
 Grip is a gtk-based cd-player and front-end for cd-rippers and MP3
@@ -28,19 +34,33 @@ z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %prep
 %setup -q
+%setup -q -a 1
 %patch0 -p1
+%patch1 -p1
+cd cdparanoia-III-alpha9.5
+%patch2 -p1
 
 %build
-make AUXDIR=/etc
+mv cdparanoia-III-alpha9.5 cdparanoia
+cd cdparanoia
+RPM_OPT=$RPM_OPT_FLAGS
+export RPM_OPT
+%configure
+make
+cd ..
+make AUXDIR=/etc INSTALLDIR=%{_bindir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT
 
-make PREFIX=$RPM_BUILD_ROOT/usr AUXDIR=$RPM_BUILD_ROOT/etc install
+install -d $RPM_BUILD_ROOT%{_datadir}/pixmaps
+
+make PREFIX=$RPM_BUILD_ROOT%{_prefix} AUXDIR=$RPM_BUILD_ROOT/etc install
+install gripicon.tif $RPM_BUILD_ROOT%{_datadir}/pixmaps/gripicon.tiff
+
+strip $RPM_BUILD_ROOT%{_bindir}/*
+
 gzip -9nf README CREDITS LICENSE TODO
-install -d $RPM_BUILD_ROOT/usr/share/pixmaps
-install gripicon.tif $RPM_BUILD_ROOT/usr/share/pixmaps/gripicon.tiff
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -48,6 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc {README,CREDITS,LICENSE,TODO}.gz
-%attr(755,root,root) /usr/bin/grip
-%attr(644,root,root) /usr/share/pixmaps/gripicon.tiff
-%attr(644,root,root) /etc/grip.rc
+%attr(755,root,root) %{_bindir}/grip
+%{_datadir}/pixmaps/gripicon.tiff
+%config /etc/grip.rc
