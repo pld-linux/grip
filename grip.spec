@@ -45,7 +45,7 @@ cd cdparanoia
 RPM_OPT=$RPM_OPT_FLAGS
 export RPM_OPT
 %configure
-make
+%{__make}
 cd ..
 %{__make} AUXDIR=/etc INSTALLDIR=%{_bindir}
 
