@@ -1,6 +1,6 @@
 --- grip-3.0.5/grip.desktop~	Sat Jan  4 20:04:07 2003
 +++ grip-3.0.5/grip.desktop	Sun Jan 19 11:22:54 2003
-@@ -1,19 +1,18 @@
+@@ -1,19 +1,19 @@
  [Desktop Entry]
  Name=Grip
 -Name[ca]=Grip
@@ -26,4 +26,5 @@
 +Icon=grip.png
 +Terminal=0
  Type=Application
++Categories=Application;Audio;
 +# vi: encoding=utf-8
