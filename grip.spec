@@ -7,7 +7,7 @@ Copyright:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://www.ling.ed.ac.uk/~oliphant/grip/%{name}-%{version}.tgz
-Source1:	http://www.mit.edu/afs/sipb/user/xiphmont/cdparanoia/download/cdparanoia-III-alpha9.5.src.tgz
+Source1:	http://www.mit.edu/afs/sipb/user/xiphmont/cdparanoia/download/cdparanoia-III-alpha9.7.src.tgz
 Patch0:		grip-install.patch
 Patch1:		grip-opt.patch
 Patch2:		cdparanoia-III.patch
