@@ -11,8 +11,8 @@ Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tar.gz
-Source0:	%{name}.desktop
-Source1:	%{name}.png
+Source1:	%{name}.desktop
+Source2:	%{name}.png
 URL:		http://www.nostatic.org/grip/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -75,7 +75,7 @@ cdda2wav)。同時提供自動的 MP3 編碼前端，還可以自動地從 Internet 上
 %prep
 %setup -q
 
-install %{SOURCE0} .
+install %{SOURCE1} .
 
 %build
 rm -f missing
@@ -94,7 +94,7 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 	DESTDIR=$RPM_BUILD_ROOT \
 	Applicationsdir=%{_applnkdir}/Multimedia
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %find_lang %{name} --with-gnome
 
