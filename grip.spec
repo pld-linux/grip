@@ -5,11 +5,12 @@ Version:     2.1
 Release:     1
 Copyright:   GPL
 Group:       Applications/Sound
+Group(pl):   Aplikacje/D¼wiêk
 Source:      http://www.ling.ed.ac.uk/~oliphant/grip/grip-2.1.tgz
 Patch0:      grip.install.patch
 URL:         http://www.ling.ed.ac.uk/~oliphant/grip
 Buildroot:   /tmp/%{name}-root
-Requires:    BladeEnc, cdparanoia
+Requires:    BladeEnc, cdparanoia, mp3info
 Buildprereq: glib => 1.2, gtk+ => 1.2
 
 %description
