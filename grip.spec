@@ -14,7 +14,7 @@ Release:	7
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/grip/%{name}-%{version}.tar.gz
 # Source0-md5:	9b51933a03dd7d7ddfbb3643fc82c2d0
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
@@ -28,7 +28,7 @@ BuildRequires:	curl-devel
 BuildRequires:	id3lib-devel >= 3.7.13
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
-Buildrequires:	libtool
+BuildRequires:	libtool
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
