@@ -2,7 +2,7 @@ Summary:	Grip, a CD player and ripper/MP3-encoder front-end
 Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
 Summary(zh_CN):	Grip是一个 CD 播放器, 抓轨器和 MP3 编码器前端程序.
 Name:		grip
-Version:	3.0.0
+Version:	3.0.1
 Release:	1
 Epoch:		1
 License:	GPL
@@ -11,9 +11,11 @@ Source0:	http://www.nostatic.org/grip/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Source2:	%{name}.desktop
 URL:		http://www.nostatic.org/grip/
-BuildRequires:	gtk+-devel
-BuildRequires:	gnome-libs-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	cdparanoia-III-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gtk+-devel
 BuildRequires:	libghttp-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +46,11 @@ Grip 是一个可以在Gnome桌面环境下运行的CD音乐播放器和抓轨器, 它可以使用
 %setup -q
 
 %build
-%configure2_13 \
+rm -f missing
+%{__aclocal} -I %{_aclocaldir}/gnome
+%{__autoconf}
+%{__automake}
+%configure \
 	--disable-id3
 %{__make}
 
@@ -57,14 +63,12 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Multimedia}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
-gzip -9nf README CREDITS TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README CREDITS TODO
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Multimedia/*
 %{_pixmapsdir}/*
