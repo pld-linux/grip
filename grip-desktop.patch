@@ -31,6 +31,6 @@
 +Terminal=false
  Type=Application
 -Categories=Application;AudioVideo;
-+Categories=GTK;GNOME;AudioVideo;
++Categories=GTK;GNOME;Audio;
 +Encoding=UTF-8
 +# vi: encoding=utf-8
