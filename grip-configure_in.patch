@@ -1,0 +1,12 @@
+diff -urN aaa/grip-3.1.1/configure.in grip-3.1.1/configure.in
+--- aaa/grip-3.1.1/configure.in	2003-07-04 17:36:15.000000000 +0200
++++ grip-3.1.1/configure.in	2003-07-14 12:39:16.000000000 +0200
+@@ -101,7 +101,7 @@
+     fclose(output);
+     exit(0);
+ }
+-], . conftest.id3
++], . ./conftest.id3
+    echo "${ID3LIB_MAJOR}.${ID3LIB_MINOR}.${ID3LIB_PATCH}", 
+    AC_MSG_WARN(could not determine id3lib version),[echo $ac_n "cross compiling; assuming ${ID3LIB_MAJOR}.${ID3LIB_MINOR}.${ID3LIB_PATCH} $ac_c"])
+    AC_DEFINE_UNQUOTED(ID3LIB_MAJOR, $ID3LIB_MAJOR, [Description])
