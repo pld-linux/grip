@@ -1,4 +1,6 @@
 Summary:     Grip, a CD player and ripper/MP3-encoder front-end
+Summary(pl): Grip, odtwarzacz kompaktów umo¿liwiaj±cy ¶ci±ganie ¶cie¿ek CD
+             i/lub kompresowanie ich w formacie MP3.
 Name:        grip
 Version:     2.1
 Release:     1
@@ -17,7 +19,11 @@ track to rip. The CDDB protocol is supported for retreiving/submitting track
 information from/to disc database servers.
 
 %description -l pl
-Grip jest 
+Grip jest odtwarzaczem kompaktów. Mo¿e byæ u¿ywany jako front-end do programów
+¶ci±gaj±cych ¶cie¿ki CD oraz kompresuj±cych pliki d¼wiêkowe do formatu MP3.
+Umo¿liwia ¶ci±ganie tak ca³ych jak i wybranych czê¶ci utworu. Program ten
+wspiera protokó³ CDDB w celu ¶ci±gania/wysy³ania danych o kompakcie 
+z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %prep
 %setup -q
