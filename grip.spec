@@ -10,7 +10,7 @@ Summary(zh_HK):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Summary(zh_TW):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
 Version:	3.2.0
-Release:	4
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
@@ -19,6 +19,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-configure_in.patch
+Patch2:		%{name}-po.patch
 URL:		http://www.nostatic.org/grip/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -93,6 +94,7 @@ cdda2wav)。同時提供自動的 MP3 編碼前端，還可以自動地從 Internet 上
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
