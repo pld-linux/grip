@@ -33,7 +33,7 @@ BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Grip is a gtk-based cd-player and front-end for cd-rippers and MP3
+Grip is a GTK+-based cd-player and front-end for cd-rippers and MP3
 encoders. It allows you to rip entire tracks, or pinpoint a section of
 a track to rip. The CDDB protocol is supported for
 retreiving/submitting track information from/to disc database servers.
@@ -49,7 +49,7 @@ auprès des serveurs CDDB. Grip fonctionne également avec DigitalDJ
 pour fournir une version unifiée informatique de votre discothèque.
 
 %description -l es
-Grip es una interfaz GTK para programas que copian bandas de CD como
+Grip es una interfaz GTK+ para programas que copian bandas de CD como
 cdparanoia y cdda2wav. Permite copiar bandas enteras, o solamente
 algunas partes. También le permite llamar su codificador MP3 favorito.
 Y también sirve como interfaz para tocar CDs.
@@ -62,7 +62,7 @@ utworu. Program ten wspiera protokó³ CDDB w celu ¶ci±gania/wysy³ania
 danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
 
 %description -l pt_BR
-Grip é uma interface GTK para programas que copiam faixas de CD como o
+Grip é uma interface GTK+ para programas que copiam faixas de CD como o
 cdparanoia e cdda2wav. Ele permite que você copie faixas inteiras, ou
 apenas pedaços. Também permite que você chame seu codificador MP3
 favorito. Finalmente, ele também serve como interface para tocar CDs.
