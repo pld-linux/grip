@@ -1,0 +1,41 @@
+diff -Naur grip-2.5/bug.c grip-2.5-p/bug.c
+--- grip-2.5/bug.c	Thu Jul  1 16:52:49 1999
++++ grip-2.5-p/bug.c	Sun Jan 28 12:30:20 2001
+@@ -101,7 +101,7 @@
+ void SubmitBugReport(void)
+ {
+   char mailcmd[256];
+-  char *filename;
++  char *filename = "/tmp/grip-tmp.XXXXXX";
+   FILE *bfp;
+ 
+   if(!*gtk_entry_get_text(GTK_ENTRY(sys_info_entry))) {
+@@ -122,9 +122,7 @@
+     return;
+   }
+ 
+-  filename=tmpnam(NULL);
+-  
+-  bfp=fopen(filename,"w");
++  bfp=fdopen(mkstemp(filename),"rw");
+   if(!bfp) {
+     printf("Error: Unable to create temporary file\n");
+     return;
+diff -Naur grip-2.5/grip.c grip-2.5-p/grip.c
+--- grip-2.5/grip.c	Sun Jan 28 12:24:01 2001
++++ grip-2.5-p/grip.c	Sun Jan 28 12:30:08 2001
+@@ -1723,12 +1723,10 @@
+ void SubmitEntry(void)
+ {
+   FILE *efp;
+-  char *filename;
++  char *filename = "/tmp/grip-tmp.XXXXXX";
+   char mailcmd[256];
+ 
+-  filename=tmpnam(NULL);
+-
+-  efp=fopen(filename,"w");
++  efp=fdopen(mkstemp(filename),"rw");
+ 
+   if(!efp) {
+     printf("Error: Unable to create temporary file\n\n");
