@@ -29,6 +29,7 @@ BuildRequires:	id3lib-devel >= 3.7.13
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
