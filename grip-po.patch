@@ -1,6 +1,6 @@
-diff -u grip-3.2.0/po.orig/es.po grip-3.2.0/po/es.po
---- grip-3.2.0/po.orig/es.po	Mon Apr 26 19:22:34 2004
-+++ grip-3.2.0/po/es.po	Wed Aug  4 01:42:45 2004
+diff -Nur grip-3.3.1.orig/po/es.po grip-3.3.1/po/es.po
+--- grip-3.3.1.orig/po/es.po	2005-06-25 18:49:43.000000000 +0000
++++ grip-3.3.1/po/es.po	2006-06-18 18:10:02.000000000 +0000
 @@ -2,7 +2,6 @@
  # Copyright (C) 2002 Free Software Foundation, Inc.
  # El_Pavo_Asesino <ciehe@yahoo.com>, 2002
@@ -9,7 +9,7 @@ diff -u grip-3.2.0/po.orig/es.po grip-3.2.0/po/es.po
  msgid ""
  msgstr ""
  "Project-Id-Version: grip-3.0.0\n"
-@@ -11,7 +10,7 @@
+@@ -12,7 +11,7 @@
  "Last-Translator: El_Pavo_Asesino <ciehe@yahoo.com>\n"
  "Language-Team: ESPAÑOL <es@li.org>\n"
  "MIME-Version: 1.0\n"
@@ -17,4 +17,22 @@ diff -u grip-3.2.0/po.orig/es.po grip-3.2.0/po/es.po
 +"Content-Type: text/plain; charset=ISO-8859-1\n"
  "Content-Transfer-Encoding: 8bit\n"
  
- #: src/main.c:55
+ #: src/main.c:56
+diff -Nur grip-3.3.1.orig/po/pl_PL.po grip-3.3.1/po/pl_PL.po
+--- grip-3.3.1.orig/po/pl_PL.po	2005-06-25 18:49:43.000000000 +0000
++++ grip-3.3.1/po/pl_PL.po	2006-06-18 18:10:31.000000000 +0000
+@@ -1042,12 +1042,12 @@
+ #: src/rip.c:825
+ #, c-format
+ msgid "Rip: Trk %d (%3.1fx)"
+-msgstr "Ripowanie: ¦¿k %d (%3.1fx)"
++msgstr "Rip: ¦¿k %d (%3.1fx)"
+ 
+ #: src/rip.c:858
+ #, c-format
+ msgid "Rip: %6.2f%%"
+-msgstr "Ripowanie: %6.2f%%"
++msgstr "Rip: %6.2f%%"
+ 
+ #: src/rip.c:878
+ msgid "Rip finished\n"
