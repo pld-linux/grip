@@ -1,13 +1,13 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
-Summary(ca.UTF-8):   Reproductor/extractor de CD d'audio
-Summary(es.UTF-8):   Grip, interfaz para reproducir CDs y generar MP3s
-Summary(fr.UTF-8):   Grip, un lecteur de CD, extracteur, et IHM pour encodeur MP3
-Summary(ja.UTF-8):   CD プレーヤー/リッパ/MP3エンコーダ フロントエンド
-Summary(pl.UTF-8):   Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
-Summary(pt_BR.UTF-8):   Grip, interface para reproduzir CDs e gerar MP3s
-Summary(zh_CN.UTF-8):   Grip 是一个 CD 播放器、抓轨器和 MP3 编码器前端程序。
-Summary(zh_HK.UTF-8):   Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
-Summary(zh_TW.UTF-8):   Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
+Summary(ca.UTF-8):	Reproductor/extractor de CD d'audio
+Summary(es.UTF-8):	Grip, interfaz para reproducir CDs y generar MP3s
+Summary(fr.UTF-8):	Grip, un lecteur de CD, extracteur, et IHM pour encodeur MP3
+Summary(ja.UTF-8):	CD プレーヤー/リッパ/MP3エンコーダ フロントエンド
+Summary(pl.UTF-8):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
+Summary(pt_BR.UTF-8):	Grip, interface para reproduzir CDs e gerar MP3s
+Summary(zh_CN.UTF-8):	Grip 是一个 CD 播放器、抓轨器和 MP3 编码器前端程序。
+Summary(zh_HK.UTF-8):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
+Summary(zh_TW.UTF-8):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
 Version:	3.3.1
 Release:	4
