@@ -9,13 +9,13 @@ Summary(zh_CN):	Grip 岆珨跺 CD 畦溫ん﹜蚰寢ん睿 MP3 晤鎢んヶ傷最唗﹝
 Summary(zh_HK):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Summary(zh_TW):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
-Version:	3.3.0
-Release:	3
+Version:	3.3.1
+Release:	4
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/grip/%{name}-%{version}.tar.gz
-# Source0-md5:	a1113ee5462363f94616c0c936653811
+# Source0-md5:	4b4233999b9f2bc85c711092553ea9aa
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-configure_in.patch
@@ -29,6 +29,7 @@ BuildRequires:	id3lib-devel >= 3.7.13
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -114,6 +115,8 @@ install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 	Applicationsdir=%{_desktopdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
+
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/pl{_PL,}
 
 # this is same as zh_TW
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/zh_HK
