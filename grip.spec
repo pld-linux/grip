@@ -118,9 +118,6 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 mv -f $RPM_BUILD_ROOT%{_datadir}/locale/pl{_PL,}
 
-# this is same as zh_TW
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/zh_HK
-
 %find_lang %{name} --all-name --with-gnome
 
 %clean
