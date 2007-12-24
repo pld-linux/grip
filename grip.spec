@@ -31,6 +31,10 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
+Suggests:	bladeenc
+Suggests:	cdparanoia-III
+Suggests:	flac
+Suggests:	lame
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
