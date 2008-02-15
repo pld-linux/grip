@@ -1,16 +1,16 @@
 Summary:	Grip, a CD player and ripper/MP3-encoder front-end
-Summary(ca):	Reproductor/extractor de CD d'audio
-Summary(es):	Grip, interfaz para reproducir CDs y generar MP3s
-Summary(fr):	Grip, un lecteur de CD, extracteur, et IHM pour encodeur MP3
-Summary(ja):	CD ¥×¥ì¡¼¥ä¡¼/¥ê¥Ã¥Ñ/MP3¥¨¥ó¥³¡¼¥À ¥Õ¥í¥ó¥È¥¨¥ó¥É
-Summary(pl):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
-Summary(pt_BR):	Grip, interface para reproduzir CDs e gerar MP3s
-Summary(zh_CN):	Grip ÊÇÒ»¸ö CD ²¥·ÅÆ÷¡¢×¥¹ìÆ÷ºÍ MP3 ±àÂëÆ÷Ç°¶Ë³ÌĞò¡£
-Summary(zh_HK):	Grip ¬O¤@­Ó CD ¼½©ñ¾¹¡B§ì­y¾¹©M MP3 ½s½X¾¹«eºİµ{¦¡¡C
-Summary(zh_TW):	Grip ¬O¤@­Ó CD ¼½©ñ¾¹¡B§ì­y¾¹©M MP3 ½s½X¾¹«eºİµ{¦¡¡C
+Summary(ca.UTF-8):	Reproductor/extractor de CD d'audio
+Summary(es.UTF-8):	Grip, interfaz para reproducir CDs y generar MP3s
+Summary(fr.UTF-8):	Grip, un lecteur de CD, extracteur, et IHM pour encodeur MP3
+Summary(ja.UTF-8):	CD ãƒ—ãƒ¬ãƒ¼ãƒ¤ãƒ¼/ãƒªãƒƒãƒ‘/MP3ã‚¨ãƒ³ã‚³ãƒ¼ãƒ€ ãƒ•ãƒ­ãƒ³ãƒˆã‚¨ãƒ³ãƒ‰
+Summary(pl.UTF-8):	Grip, odtwarzacz CD z frontendem do ripowania i kodowania MP3
+Summary(pt_BR.UTF-8):	Grip, interface para reproduzir CDs e gerar MP3s
+Summary(zh_CN.UTF-8):	Grip æ˜¯ä¸€ä¸ª CD æ’­æ”¾å™¨ã€æŠ“è½¨å™¨å’Œ MP3 ç¼–ç å™¨å‰ç«¯ç¨‹åºã€‚
+Summary(zh_HK.UTF-8):	Grip æ˜¯ä¸€å€‹ CD æ’­æ”¾å™¨ã€æŠ“è»Œå™¨å’Œ MP3 ç·¨ç¢¼å™¨å‰ç«¯ç¨‹å¼ã€‚
+Summary(zh_TW.UTF-8):	Grip æ˜¯ä¸€å€‹ CD æ’­æ”¾å™¨ã€æŠ“è»Œå™¨å’Œ MP3 ç·¨ç¢¼å™¨å‰ç«¯ç¨‹å¼ã€‚
 Name:		grip
 Version:	3.3.1
-Release:	2
+Release:	5
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
@@ -31,6 +31,10 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	vte-devel
+Suggests:	bladeenc
+Suggests:	cdparanoia-III
+Suggests:	flac
+Suggests:	lame
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,58 +43,58 @@ encoders. It allows you to rip entire tracks, or pinpoint a section of
 a track to rip. The CDDB protocol is supported for
 retreiving/submitting track information from/to disc database servers.
 
-%description -l fr
+%description -l fr.UTF-8
 Grip est un lecteur-extracteur de CD pour le Bureau GNome. Il a des
-capacités d'extraction du type cdparanoia incluses, mais il peut
-utiliser un extracteur externe (comme cdda2wav). Il fournis également
+capacitÃ©s d'extraction du type cdparanoia incluses, mais il peut
+utiliser un extracteur externe (comme cdda2wav). Il fournis Ã©galement
 une IHM pour les encodeurs MP3, permettant simplement de prendre un
-disque et de le transformer en MP3. La récupération des noms sur
-Internet permet également d'avoir les informations sur les pistes
-auprès des serveurs CDDB. Grip fonctionne également avec DigitalDJ
-pour fournir une version unifiée informatique de votre discothèque.
+disque et de le transformer en MP3. La rÃ©cupÃ©ration des noms sur
+Internet permet Ã©galement d'avoir les informations sur les pistes
+auprÃ¨s des serveurs CDDB. Grip fonctionne Ã©galement avec DigitalDJ
+pour fournir une version unifiÃ©e informatique de votre discothÃ¨que.
 
-%description -l es
+%description -l es.UTF-8
 Grip es una interfaz GTK+ para programas que copian bandas de CD como
 cdparanoia y cdda2wav. Permite copiar bandas enteras, o solamente
-algunas partes. También le permite llamar su codificador MP3 favorito.
-Y también sirve como interfaz para tocar CDs.
+algunas partes. TambiÃ©n le permite llamar su codificador MP3 favorito.
+Y tambiÃ©n sirve como interfaz para tocar CDs.
 
-%description -l pl
-Grip jest odtwarzaczem kompaktów. Mo¿e byæ u¿ywany jako front-end do
-programów ¶ci±gaj±cych ¶cie¿ki CD oraz kompresuj±cych pliki d¼wiêkowe
-do formatu MP3. Umo¿liwia ¶ci±ganie tak ca³ych jak i wybranych czê¶ci
-utworu. Program ten wspiera protokó³ CDDB w celu ¶ci±gania/wysy³ania
-danych o kompakcie z/do umo¿liwiaj±cego tego typu operacje serwera.
+%description -l pl.UTF-8
+Grip jest odtwarzaczem kompaktÃ³w. MoÅ¼e byÄ‡ uÅ¼ywany jako front-end do
+programÃ³w Å›ciÄ…gajÄ…cych Å›cieÅ¼ki CD oraz kompresujÄ…cych pliki dÅºwiÄ™kowe
+do formatu MP3. UmoÅ¼liwia Å›ciÄ…ganie tak caÅ‚ych jak i wybranych czÄ™Å›ci
+utworu. Program ten wspiera protokÃ³Å‚ CDDB w celu Å›ciÄ…gania/wysyÅ‚ania
+danych o kompakcie z/do umoÅ¼liwiajÄ…cego tego typu operacje serwera.
 
-%description -l pt_BR
-Grip é uma interface GTK+ para programas que copiam faixas de CD como o
-cdparanoia e cdda2wav. Ele permite que você copie faixas inteiras, ou
-apenas pedaços. Também permite que você chame seu codificador MP3
-favorito. Finalmente, ele também serve como interface para tocar CDs.
+%description -l pt_BR.UTF-8
+Grip Ã© uma interface GTK+ para programas que copiam faixas de CD como o
+cdparanoia e cdda2wav. Ele permite que vocÃª copie faixas inteiras, ou
+apenas pedaÃ§os. TambÃ©m permite que vocÃª chame seu codificador MP3
+favorito. Finalmente, ele tambÃ©m serve como interface para tocar CDs.
 
-%description -l zh_CN
-Grip ÊÇÒ»¸ö¿ÉÒÔÔÚ GNOME ×ÀÃæ»·¾³ÏÂÔËĞĞµÄ CD
-ÒôÀÖ²¥·ÅÆ÷ºÍ×¥¹ìÆ÷¡£Ëü¿ÉÒÔÊ¹ÓÃ ÄÚÖÃµÄ cdparanoia ³ÌĞò×¥¹ìÆ÷
-(½«Òô¹ì´æ´¢ÎªÎÄ¼ş)£¬Ò²¿ÉÒÔÊ¹ÓÃÍâ²¿µÄ×¥¹ìÆ÷ (ÀıÈç:
-cdda2wav)¡£Í¬Ê±Ìá¹©×Ô¶¯µÄ MP3 ±àÂëÇ°¶Ë£¬»¹¿ÉÒÔ×Ô¶¯µØ´Ó Internet ÉÏµÄ
-¹âÅÌÊı¾İ¿âÖĞ²éÑ¯¹âÅÌÇúÄ¿¡£Èç¹ûĞ­Í¬ DigitalDJ
-³ÌĞòÒ»Æğ¹¤×÷£¬Äú¿ÉÒÔ´´½¨×Ô¼ºµÄ ¡°¼ÆËã»ú»¯¡±µÄÒôÀÖ¿â¡£
+%description -l zh_CN.UTF-8
+Grip æ˜¯ä¸€ä¸ªå¯ä»¥åœ¨ GNOME æ¡Œé¢ç¯å¢ƒä¸‹è¿è¡Œçš„ CD
+éŸ³ä¹æ’­æ”¾å™¨å’ŒæŠ“è½¨å™¨ã€‚å®ƒå¯ä»¥ä½¿ç”¨ å†…ç½®çš„ cdparanoia ç¨‹åºæŠ“è½¨å™¨
+(å°†éŸ³è½¨å­˜å‚¨ä¸ºæ–‡ä»¶)ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨å¤–éƒ¨çš„æŠ“è½¨å™¨ (ä¾‹å¦‚:
+cdda2wav)ã€‚åŒæ—¶æä¾›è‡ªåŠ¨çš„ MP3 ç¼–ç å‰ç«¯ï¼Œè¿˜å¯ä»¥è‡ªåŠ¨åœ°ä» Internet ä¸Šçš„
+å…‰ç›˜æ•°æ®åº“ä¸­æŸ¥è¯¢å…‰ç›˜æ›²ç›®ã€‚å¦‚æœååŒ DigitalDJ
+ç¨‹åºä¸€èµ·å·¥ä½œï¼Œæ‚¨å¯ä»¥åˆ›å»ºè‡ªå·±çš„ â€œè®¡ç®—æœºåŒ–â€çš„éŸ³ä¹åº“ã€‚
 
-%description -l zh_HK
-Grip ¬O¤@­Ó¥i¥H¦b GNOME ®à­±Àô¹Ò¤U°õ¦æªº CD
-­µ¼Ö¼½©ñ¾¹©M§ì­y¾¹¡C¥¦¥i¥H¨Ï ¥Î¤º¸mªº cdparanoia µ{¦¡§ì­y¾¹
-(±N­µ­y¦s¬°ÀÉ®×)¡A¤]¥i¥H¨Ï¥Î¥~³¡ªº§ì­y¾¹ (¨Ò¦p
-cdda2wav)¡C¦P®É´£¨Ñ¦Û°Êªº MP3 ½s½X«eºİ¡AÁÙ¥i¥H¦Û°Ê¦a±q Internet ¤W
-ªº¥úºĞ¸ê®Æ®w¤¤¬d¸ß¥úºĞ¦±¥Ø¡C¦pªG¨ó¦P DigitalDJ
-µ{¦¡¤@°_¤u§@¡A±z¥i¥H«Ø¥ß ¦Û¤vªº¡u¹q¸£¤Æ¡vªº­µ¼Ö®w¡C
+%description -l zh_HK.UTF-8
+Grip æ˜¯ä¸€å€‹å¯ä»¥åœ¨ GNOME æ¡Œé¢ç’°å¢ƒä¸‹åŸ·è¡Œçš„ CD
+éŸ³æ¨‚æ’­æ”¾å™¨å’ŒæŠ“è»Œå™¨ã€‚å®ƒå¯ä»¥ä½¿ ç”¨å…§ç½®çš„ cdparanoia ç¨‹å¼æŠ“è»Œå™¨
+(å°‡éŸ³è»Œå­˜ç‚ºæª”æ¡ˆ)ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨å¤–éƒ¨çš„æŠ“è»Œå™¨ (ä¾‹å¦‚
+cdda2wav)ã€‚åŒæ™‚æä¾›è‡ªå‹•çš„ MP3 ç·¨ç¢¼å‰ç«¯ï¼Œé‚„å¯ä»¥è‡ªå‹•åœ°å¾ Internet ä¸Š
+çš„å…‰ç¢Ÿè³‡æ–™åº«ä¸­æŸ¥è©¢å…‰ç¢Ÿæ›²ç›®ã€‚å¦‚æœå”åŒ DigitalDJ
+ç¨‹å¼ä¸€èµ·å·¥ä½œï¼Œæ‚¨å¯ä»¥å»ºç«‹ è‡ªå·±çš„ã€Œé›»è…¦åŒ–ã€çš„éŸ³æ¨‚åº«ã€‚
 
-%description -l zh_TW
-Grip ¬O¤@­Ó¥i¥H¦b GNOME ®à­±Àô¹Ò¤U°õ¦æªº CD
-­µ¼Ö¼½©ñ¾¹©M§ì­y¾¹¡C¥¦¥i¥H¨Ï ¥Î¤º¸mªº cdparanoia µ{¦¡§ì­y¾¹
-(±N­µ­y¦s¬°ÀÉ®×)¡A¤]¥i¥H¨Ï¥Î¥~³¡ªº§ì­y¾¹ (¨Ò¦p
-cdda2wav)¡C¦P®É´£¨Ñ¦Û°Êªº MP3 ½s½X«eºİ¡AÁÙ¥i¥H¦Û°Ê¦a±q Internet ¤W
-ªº¥úºĞ¸ê®Æ®w¤¤¬d¸ß¥úºĞ¦±¥Ø¡C¦pªG¨ó¦P DigitalDJ
-µ{¦¡¤@°_¤u§@¡A±z¥i¥H«Ø¥ß ¦Û¤vªº¡u¹q¸£¤Æ¡vªº­µ¼Ö®w¡C
+%description -l zh_TW.UTF-8
+Grip æ˜¯ä¸€å€‹å¯ä»¥åœ¨ GNOME æ¡Œé¢ç’°å¢ƒä¸‹åŸ·è¡Œçš„ CD
+éŸ³æ¨‚æ’­æ”¾å™¨å’ŒæŠ“è»Œå™¨ã€‚å®ƒå¯ä»¥ä½¿ ç”¨å…§ç½®çš„ cdparanoia ç¨‹å¼æŠ“è»Œå™¨
+(å°‡éŸ³è»Œå­˜ç‚ºæª”æ¡ˆ)ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨å¤–éƒ¨çš„æŠ“è»Œå™¨ (ä¾‹å¦‚
+cdda2wav)ã€‚åŒæ™‚æä¾›è‡ªå‹•çš„ MP3 ç·¨ç¢¼å‰ç«¯ï¼Œé‚„å¯ä»¥è‡ªå‹•åœ°å¾ Internet ä¸Š
+çš„å…‰ç¢Ÿè³‡æ–™åº«ä¸­æŸ¥è©¢å…‰ç¢Ÿæ›²ç›®ã€‚å¦‚æœå”åŒ DigitalDJ
+ç¨‹å¼ä¸€èµ·å·¥ä½œï¼Œæ‚¨å¯ä»¥å»ºç«‹ è‡ªå·±çš„ã€Œé›»è…¦åŒ–ã€çš„éŸ³æ¨‚åº«ã€‚
 
 %prep
 %setup -q
@@ -118,9 +122,6 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 mv -f $RPM_BUILD_ROOT%{_datadir}/locale/pl{_PL,}
 
-# this is same as zh_TW
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/zh_HK
-
 %find_lang %{name} --all-name --with-gnome
 
 %clean
@@ -130,5 +131,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README CREDITS TODO
 %attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
