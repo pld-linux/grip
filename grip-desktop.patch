@@ -1,7 +1,7 @@
-diff -Nur grip-3.3.0-orig/grip.desktop grip-3.3.0/grip.desktop
---- grip-3.3.0-orig/grip.desktop	2005-01-29 19:34:17.000000000 +0100
-+++ grip-3.3.0/grip.desktop	2005-02-06 11:15:18.709642848 +0100
-@@ -1,24 +1,22 @@
+diff -urN grip-3.3.1/grip.desktop grip-3.3.1.new/grip.desktop
+--- grip-3.3.1/grip.desktop	2005-01-29 19:34:17.000000000 +0100
++++ grip-3.3.1.new/grip.desktop	2009-06-04 10:19:47.915620083 +0200
+@@ -1,24 +1,21 @@
  [Desktop Entry]
  Name=Grip
 -Name[ca]=Grip
@@ -12,9 +12,9 @@ diff -Nur grip-3.3.0-orig/grip.desktop grip-3.3.0/grip.desktop
 -Name[zh_CN.GB2312]=Grip MP3 Â<88>∂‰Ω<9C>Á®<8B>Â∫<8F>
 -Name[zh_TW]=Grip MP3 Ë£Ω‰Ω<9C>Á®<8B>Âº<8F>
 -Name[zh_TW.Big5]=Grip MP3 Ë£Ω‰Ω<9C>Á®<8B>Âº<8F>
+-Comment=CD player/ripper
 +Name[zh_CN]=Grip MP3 Âà∂‰ΩúÁ®ãÂ∫è
 +Name[zh_TW]=Grip MP3 Ë£Ω‰ΩúÁ®ãÂºè
--Comment=CD player/ripper
 +Comment=Grip, a CD player and ripper/MP3-encoder front-end
  Comment[ca]=Reproductor/extractor de CD d'audio
  Comment[es]=Reproductor/extractor de CDs de audio
@@ -32,10 +32,9 @@ diff -Nur grip-3.3.0-orig/grip.desktop grip-3.3.0/grip.desktop
 +Comment[zh_TW]=Grip ËÆìÊÇ®ËºïÈ¨ÜË£Ω‰Ωú MP3 Ê™î
  Exec=grip
 -Icon=gripicon.png
-+Icon=grip.png
++Icon=grip
 +Terminal=false
  Type=Application
 -Categories=Application;AudioVideo;
 +Categories=GTK;GNOME;Audio;
-+Encoding=UTF-8
 +# vi: encoding=utf-8
