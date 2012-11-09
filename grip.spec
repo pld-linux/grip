@@ -10,7 +10,7 @@ Summary(zh_HK.UTF-8):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器�
 Summary(zh_TW.UTF-8):	Grip 是一個 CD 播放器、抓軌器和 MP3 編碼器前端程式。
 Name:		grip
 Version:	3.3.1
-Release:	8
+Release:	9
 Epoch:		1
 License:	GPL
 Group:		Applications/Sound
